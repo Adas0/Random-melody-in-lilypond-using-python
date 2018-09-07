@@ -1,3 +1,6 @@
+#This code belongs to Adam Korytowski, Kraków, Poland
+
+
 from random import randint
 
 header = '\\version "2.18.2" \
