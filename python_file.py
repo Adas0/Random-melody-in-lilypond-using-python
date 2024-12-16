@@ -1,5 +1,5 @@
+#Date: 2017
 #This code belongs to Adam Korytowski, Kraków, Poland
-
 
 from random import randint
 
@@ -61,8 +61,6 @@ with open('sekwe.ly', 'w') as projectFile:
     subdominant=notesLoop[idxStartingNote+5];
     dominant=notesLoop[idxStartingNote+7];
 
-    # print(subdominant);
-    # print(dominant);
 
     for el in range(0,5):           #zwiekszenie prawdop. wystapienia subdominanty i dominanty
         notes.append(subdominant);
@@ -113,14 +111,12 @@ with open('sekwe.ly', 'w') as projectFile:
                 values += 1;
 
 
-            else:   #jezeli nie jest to koniec taktu to:
+            else:  
                 randNote = notes[randint(0, len(notes) - 1)];
                 randNote += changedNote[randint(0, 3)];  # dodanie krzyzyka/bemola
                 randNote += changedOctave[randint(0, 2)];  # dodanie oktawy
                 NOTES.append(randNote);
                 projectFile.write(randNote + randomRythm);
-
-
 
     print(NOTES);
 
